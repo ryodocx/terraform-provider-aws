@@ -213,7 +213,7 @@ func ResourceListenerRule() *schema.Resource {
 									"message_body": {
 										Type:         schema.TypeString,
 										Optional:     true,
-										ValidateFunc: validation.StringLenBetween(0, 1024),
+										ValidateFunc: validation.StringRuneCountBetween(0, 1024),
 									},
 
 									"status_code": {
